@@ -216,3 +216,21 @@ ul li:hover ul {
      width: 100%;
   }
 }
+
+.footer
+{
+  margin-top: 100px;
+  background-image: url('images/back_ground_pic.jpg');
+  padding: 25px 0 25px 0;
+  line-height: 2;
+  word-spacing: 50px;
+  color: #11999E;
+  text-align: center;
+}
+
+.footer-name
+{
+ word-spacing: normal;
+ color: #ffffff;
+ text-align: center;
+}
