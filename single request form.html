@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adoption Request Form</title>
+    <link rel="shortcut icon" href="images\favicon-32x32.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
       html, body {
       min-height: 100%;
       }
-      body, div, form, input, select, textarea, label { 
+      body, div, form, input, select, textarea, label {
       padding: 0;
       margin: 0;
       outline: none;
@@ -38,12 +41,12 @@
       padding: 20px;
       border-radius: 6px;
       background: #fff;
-      box-shadow: 0 0 8px  #cc7a00; 
+      box-shadow: 0 0 8px  #cc7a00;
       }
       .banner {
       position: relative;
       height: 300px;
-      background-image: url("/uploads/media/default/0001/02/095995dadd0a1a9d5d83e6a467edf9ef7f35c114.jpeg");  
+      background-image: url("/uploads/media/default/0001/02/095995dadd0a1a9d5d83e6a467edf9ef7f35c114.jpeg");
       background-size: cover;
       display: flex;
       justify-content: center;
@@ -52,7 +55,7 @@
       }
       .banner::after {
       content: "";
-      background-color: rgba(0, 0, 0, 0.2); 
+      background-color: #f08080;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -116,12 +119,6 @@
       margin: 5px 20px 15px 0;
       cursor: pointer;
       }
-      .question span {
-      margin-left: 30px;
-      }
-      .question-answer label {
-      display: block;
-      }
       label.radio:before {
       content: "";
       position: absolute;
@@ -158,7 +155,7 @@
       width: 150px;
       padding: 10px;
       border: none;
-      border-radius: 5px; 
+      border-radius: 5px;
       background: #cc7a00;
       font-size: 16px;
       color: #fff;
@@ -186,16 +183,18 @@
     </style>
   </head>
   <body>
+  
     <div class="testbox">
-      <form action="request.html">
+      <form action="C:\xampp\single request.php" method="POST">
         <div class="banner">
           <h1>Adoption Request Form</h1>
         </div>
+
         <div class="item">
           <label for="name">Name<span>*</span></label>
           <div class="name-item">
-            <input id="name" type="text" name="name" placeholder="First" />
-            <input type="text" name="name" placeholder="Last" />
+            <input id="name" type="text" name="fname" placeholder="First" />
+            <input type="text" name="lname" placeholder="Last" />
           </div>
         </div>
         <div class="item">
@@ -203,75 +202,46 @@
           <input id="email" type="email" name="email"/>
         </div>
 <div class="item">
-          <label for="Date of Request">Date of Request<span>*</span></label>
-          <input id="Date of Request" type="Date of Request" name="Date of Request"/>
+          <label for="Date of Birth">Date of Birth<span>*</span></label>
+          <input id="Date of Birth" type="Date of Birth" name="dob"/>
 
 <div class="item">
           <label for="Adhar No">Adhar No<span>*</span></label>
           <input id="Adhar No" type="Adhar No" name="Adhar No" required/>
-        </div>    
+        </div>
 
 
-    
-        
+
+
 <div class="item">
           <label for="profession">Profession<span>*</span></label>
           <input id="profession" type="profession" name="profession" required/>
         </div>
 
 <div class="item">
-          <label for="monthly income">Monthly Income<span>*</span></label>
-          <input id="monthly income" type="monthly income" name="monthly income" required/>
+          <label for="annual income">Annual Income<span>*</span></label>
+          <input id="annual income" type="annual income" name="income" required/>
 </div>
-       
+
 <div class="item">
           <label for="reason for adopting a child">Reason for Adopting a Child<span>*</span></label>
-          <input id="reason for adopting a child" type="reason for adopting a child" name="reason for adopting a child" required/>
+          <input id="reason for adopting a child" type="reason for adopting a child" name="reason" required/>
 </div>
-       
+
 <div class="item">
-          <label for="particular of adopted children,if any with age and sex">Particular of Adopted children,if any with age and sex<span>*</span></label>
-          <input id="particular of adopted children,if any with age and sex" type="particular of adopted children,if any with age and sex" name="reason for adopting a child" required/>
+          <label for="particular of adopted children,if any with age and sex">Preferences for Adopting a children(age, gender, skin color, religion, health condition, if nothing type NA)<span>*</span></label>
+          <input id="preferences" type="preferences" name="preferences" required/>
 </div>
-       
 
-
-
-
-
-
-
-
-
-
-
-
- <div class="question">
-          <label>Is this your first request for the adoption?</label>
-          <div class="question-answer">
-            <div>
-              <input type="radio" value="none" id="radio_1" name="availability"/>
-              <label for="radio_1" class="radio"><span>Yes</span></label>
-            </div>
-            <div>
-              <input  type="radio" value="none" id="radio_2" name="availability"/>
-              <label for="radio_2" class="radio"><span>No</span></label>
-            </div>
-          </div>
-        </div>
-        
-      
+</form>
         <div class="btn-block">
-        <button type="submit Request" href="request.html">Submit Request</button>
-<a href="request.html"></a>
+        <button type="submit Request" name="submit">Submit Request</button>
         </div>
 
 
 
       </form>
     </div>
+	
   </body>
 </html>
-
-
-
